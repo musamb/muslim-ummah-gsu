@@ -30,7 +30,7 @@ include('header.php');
         <div class="card-body d-sm-flex justify-content-between">
 
           <h4 class="mb-2 mb-sm-0 pt-1">
-            <a href="dashboard" target="_blank">Home Page</a>
+            <a href="dashboard">Home Page</a>
             <span>/</span>
             <span>Manage Notifications</span>
           </h4>
@@ -58,7 +58,7 @@ include('header.php');
     <tbody>
     <?php
     
-  $result = $mysqli->query("SELECT * FROM post") or die($mysqli->error());
+  $result = $mysqli->query("SELECT * FROM post ORDER BY date desc") or die($mysqli->error());
 ?>
         <?php while ($row = $result->fetch_assoc()):?>
                         <tr>

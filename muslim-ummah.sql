@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 11, 2019 at 11:57 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.1.28
+-- Generation Time: Nov 12, 2019 at 01:10 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,8 +19,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `alumni`
+-- Database: `muslim-ummah`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `email`, `password`) VALUES
+(1, 'admin@gmail.com', 'admin');
 
 -- --------------------------------------------------------
 
@@ -113,11 +132,19 @@ INSERT INTO `post` (`id`, `status`, `subject`, `message`, `date`) VALUES
 (2, 'Member', 'Domain name change', 'The Aim and Objective of the Association as it is contained in the Constitution, Article II; shall be to: <br>\r\n              1. Promote the welfare, standard, prestige and good name of the University. <br>\r\n              2. Encourage a close relationship between the University authority, staff and students, the general public and the Association. <br>\r\n              3. Provide assistance to the various components of the University.\r\n              4. Provide service and donation to charities, religious, educational organizational and other non-profit bodies. <br>\r\n              5. Explore co-operation that have similar aims and objectives within and outside the Federal Republic of Nigeria. <br>\r\n           ', '2019-11-08 12:12:01'),
 (3, 'Member', 'Confirmation ', 'The Aim and Objective of the Association as it is contained in the Constitution, Article II; shall be to: <br>\r\n              1. Promote the welfare, standard, prestige and good name of the University. <br>\r\n              2. Encourage a close relationship between the University authority, staff and students, the general public and the Association. <br>\r\n              3. Provide assistance to the various components of the University.\r\n              4. Provide service and donation to charities, religious, educational organizational and other non-profit bodies. <br>\r\n              5. Explore co-operation that have similar aims and objectives within and outside the Federal Republic of Nigeria. <br>\r\n              6. Institute a scholarship and provide financial assistance to the needy educational students. <br>\r\n              ', '2019-11-08 12:12:13'),
 (4, 'Admin', 'General Members Meeting', 'The faculty of science is one of the three faculties that was established since the inception of the university 10 years ago and consists of the departments of biological sciences, biochemistry, chemistry, geography, geology, mathematics, microbiology and physics. actually the departments of biochemistry and microbiology were curved out of the department of biological sciences two sessions ago. at the moment the departments of geology, maths and the office of the dean occupy some of the quadrangular block of offices that is shared between the faculty and that of arts and social sciences. the other departments are located within the vicinity of the faculty except the departments of biochemistry and microbiology that are situated at the premises of the medical college about Â½ kilometre away from the faculty.', '2019-11-08 14:29:29'),
-(5, 'Admin', 'General Members Meeting', 'The faculty of science is one of the three faculties that was established since the inception of the university 10 years ago and consists of the departments of biological sciences, biochemistry, chemistry, geography, geology, mathematics, microbiology and physics. actually the departments of biochemistry and microbiology were curved out of the department of biological sciences two sessions ago. at the moment the departments of geology, maths and the office of the dean occupy some of the quadrangular block of offices that is shared between the faculty and that of arts and social sciences.', '2019-11-08 14:33:16');
+(5, 'Admin', 'General Members Meeting', 'The faculty of science is one of the three faculties that was established since the inception of the university 10 years ago and consists of the departments of biological sciences, biochemistry, chemistry, geography, geology, mathematics, microbiology and physics. actually the departments of biochemistry and microbiology were curved out of the department of biological sciences two sessions ago. at the moment the departments of geology, maths and the office of the dean occupy some of the quadrangular block of offices that is shared between the faculty and that of arts and social sciences.', '2019-11-08 14:33:16'),
+(6, 'Admin', 'Aminu', 'Yalenguruza', '2019-11-12 12:52:45'),
+(7, 'Member', 'Congress Meeting notice', '10:00pm', '2019-11-12 12:55:36');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `course`
@@ -149,6 +176,12 @@ ALTER TABLE `post`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
@@ -170,7 +203,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -4,7 +4,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © <?php echo date('Y');  ?> Copyright:
-      <a href="" target="_blank"> G S U ALUMNI </a>
+      <a href="index.php" > Muslim-Ummah G S U </a>
     </div>
     <!--/.Copyright-->
 

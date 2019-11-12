@@ -94,7 +94,7 @@ if (isset($_POST['post'])) {
 
         <!-- Brand -->
         <a class="navbar-brand waves-effect" href="index.php">
-          <strong class="blue-text">G S U ALUMNI</strong>
+          <strong class="blue-text">Muslim-Ummah G S U</strong>
         </a>
 
         <!-- Collapse -->
@@ -167,16 +167,16 @@ if (isset($_POST['post'])) {
         <a href="dashboard.php" class="list-group-item active waves-effect">
           <i class="fas fa-chart-pie mr-3"></i>Dashboard
         </a>
-        <a href="profile.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-user mr-3"></i>Profile</a>
+        <!-- <a href="profile.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-user mr-3"></i>Profile</a> -->
           <a href="faculty-course.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-table mr-3"></i>Add Faculty/Course</a>
+          <i class="fas fa-plus mr-3"></i>Add Faculty/Course</a>
         <a href="manage-members.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-table mr-3"></i>Manage Members</a>
+          <i class="fas fa fa-users mr-3"></i>Manage Members</a>
         <a href="manage-notification.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-map mr-3"></i>Manage Notification</a>
+          <i class="fas fa fa-bell mr-3"></i>Manage Notification</a>
         <a href="logout.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-money-bill-alt mr-3"></i>Logout</a>
+          <i class="fas fa-sign-out-alt mr-3"></i>Logout</a>
       </div>
 
     </div>
@@ -193,6 +193,7 @@ if (isset($_POST['post'])) {
     <div class="footer-copyright py-3">
       © <?php echo date('Y');  ?> Copyright:
       <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> G S U ALUMNI </a>
+
     </div>
     <!--/.Copyright-->
 

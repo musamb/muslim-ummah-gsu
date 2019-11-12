@@ -165,7 +165,7 @@ if (isset($_POST['post'])) {
   </div>
       <div class="list-group list-group-flush">
         <a href="dashboard.php" class="list-group-item active waves-effect">
-          <i class="fas fa-chart-pie mr-3"></i>Dashboard
+          <i class="fas fa fa-dashboard mr-3"></i>Dashboard
         </a>
         <!-- <a href="profile.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-user mr-3"></i>Profile</a> -->

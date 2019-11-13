@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>G S U Alumni</title>
+  <title>Muslim-Ummah G S U</title>
 
   <!-- Custom fonts for this theme -->
   <link href="member/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.php">G S U Alumni</a>
+      <a class="navbar-brand js-scroll-trigger" href="index.php">Muslim-Ummah G S U</a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
@@ -64,10 +64,10 @@
 
       <!-- Masthead Avatar Image -->
       <div style="margin-top: -70px;">
-        <img class="mb-3 mt--5" src="member/img/logo.jpg" alt="">
+        <img class="mb-3 mt--5" src="member/img/mssnlogo.jpg" width="180" height="180" alt="">
       </div>
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading mb-0">Welcome To <br> Gombe State University <br> (GSU) <br>Muslim-Ummah</h1>
+      <h1 class="masthead-heading mb-0 text-success">Welcome To <br> Gombe State University <br> (GSU) <br>Muslim-Ummah</h1>
 
       <!-- Icon Divider -->
       <div class="divider-custom">

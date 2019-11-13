@@ -8,6 +8,7 @@ if (isset($_POST['post'])) {
     
     $sql = "INSERT INTO post (status,subject,message) VALUES('$status', '$subject', '$message')";
     $result = mysqli_query($mysqli,$sql);
+    header("location:member-index.php");
 }
 
 

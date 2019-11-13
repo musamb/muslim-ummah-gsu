@@ -103,7 +103,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("sssssssssss", $param_fullname, $param_gender, $param_staff_type, $param_course, $param_matric_number, $param_graduation_year, $param_phone, $param_email, $param_address, $param_photo, $param_password);
+            $stmt->bind_param("sssssssssss", $param_fullname, $param_gender, $param_staff_type, $param_faculty, $param_dept, $param_staff_id, $param_phone, $param_email, $param_address, $param_photo, $param_password);
             
             // Set parameters
             $param_fullname = $fullname;
@@ -160,7 +160,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>GSU ALUMNI</title>
+  <title>Muslim-Ummah G S U</title>
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

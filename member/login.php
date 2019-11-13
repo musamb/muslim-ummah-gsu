@@ -224,7 +224,11 @@ if (isset($_POST['login'])) {
 
   <style>
     body{
-      background-color: teal;
+      background-image:url("img/mssnlogo.jpg");
+      background-position:center;
+      background-size:contain;
+      background-repeat:no-repeat;
+
       padding-top: 90px;
     }
     
@@ -242,15 +246,15 @@ if (isset($_POST['login'])) {
 <body id="page-top">
 
   <div class="container">
-    <div class="col-md-5 mx-auto">
-        <div class="card">
+    <div class="col-md-5 ml-auto mx-auto">
+        <div class="card" style="opacity:0.9">
             <div class="card-body">
                 <!-- <?php echo $row['fullname'];?> -->
                 <!-- member login form -->
                 <form action="login.php" method="POST">
 
                     <!-- login logo -->
-                    <img class="mb-4 mx-auto" src="img/logo.jpg" alt="" width="100" height="100">
+                    <img class="mb-4 mx-auto" src="img/gsu.png" alt="" width="100" height="100">
                     <!-- login header -->
                     <h1 class="h3 mb-3 font-weight-normal">Account Login</h1>
 
@@ -264,7 +268,7 @@ if (isset($_POST['login'])) {
                     </div>
                     <hr>
                     <div class="form-group">     
-                        <button type="submit" class="btn btn-primary btn-block" name="login">L o g i n</button>
+                        <button type="submit" class="btn btn-success btn-block" name="login">L o g i n</button>
                     </div>
                 </form>
 

@@ -14,10 +14,10 @@
 
       <!-- Masthead Avatar Image -->
       <div style="margin-top: -70px;">
-        <img class="mb-3 mt--5" src="img/logo.jpg" alt="">
+        <img class="mb-3 mt--5" src="img/mssnlogo.jpg" width="200" height="200" alt="">
       </div>
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading mb-0">Welcome To <br> Gombe State University <br> (GSU) <br> Muslim-Ummah</h1>
+      <h1 class="masthead-heading mb-0 text-success">Welcome To <br> Gombe State University <br> (GSU) <br> Muslim-Ummah</h1>
 
       <!-- Icon Divider -->
       <!-- <div class="divider-custom">

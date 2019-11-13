@@ -22,7 +22,7 @@ if (isset($_POST['post'])) {
     <title>Document</title>
     <style>
     .modal-body{
-        margin-top: -50px;
+        margin-top: 0px;
         /* margin-bottom: -50px; */
     }
 

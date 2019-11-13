@@ -130,11 +130,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 $_SESSION['success'] = "<div id='card'><h6><i class='fa fa-check-circle'></i> Registration is successful. You can now </h6><a href='login.php' class='btn btn-success'>L o g i n</a></div>";
 
-
-                // Redirect to login page
-                // header('location: register.php');
-                // $_SESSION['success'] = "<div id='card'><h3><i class='fa fa-check-circle'></i> Registration is successful. You can now </h3><a href='login.php' class='btn btn-success'>L o g i n</a></div>";
-
             } else{
                 echo "Something went wrong. Please try again later.";
             }
@@ -172,7 +167,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <style>
     body{
-
         /* padding-top: 6rem; */
       background: linear-gradient(to bottom,rgba(66,100,77,.1)0,rgba(80,77,66,.1) 50%),url(../img/muslim_ummah_logo.jpg);
       /* padding-bottom: 1rem; */
@@ -220,7 +214,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input type="fullname" name="fullname" class="form-control" placeholder="Full Name" value="<?php echo $fullname?>" required>                                                                                                    
+                            <input type="fullname" name="fullname" class="form-control" placeholder="Full Name" value="<?php echo $fullname?>" required>  
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -332,8 +326,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
     </div>
   </div>
-
-  
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>

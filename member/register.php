@@ -172,13 +172,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <style>
     body{
-      background-color: teal;
+
+        /* padding-top: 6rem; */
+      background: linear-gradient(to bottom,rgba(66,100,77,.1)0,rgba(80,77,66,.1) 50%),url(../img/muslim_ummah_logo.jpg);
+      /* padding-bottom: 1rem; */
+      background-position: center;
+      background-repeat: no-repeat;
+      /* background-attachment: scroll; */
+      background-size: cover;
       padding-top: 50px;
       padding-bottom: 50px;
     }
 
     .card{
         text-align: center;
+        opacity: 0.98;
     }
 
     .form-control{
@@ -205,7 +213,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" enctype="multipart/form-data">
 
                     <!-- login logo -->
-                    <img class="mb-4 mx-auto" src="img/logo.jpg" alt="" width="100" height="100">
+                    <img class="mb-2 mx-auto" src="img/mssnlogo.jpg" alt="" width="120" height="120">
                     <!-- login header -->
                     <h1 class="h3 mb-3 font-weight-normal">Membership Registeration</h1>
 

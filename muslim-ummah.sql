@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2019 at 01:10 PM
+-- Generation Time: Nov 13, 2019 at 09:13 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -44,19 +44,19 @@ INSERT INTO `admin` (`id`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `course`
+-- Table structure for table `dept_unit`
 --
 
-CREATE TABLE `course` (
+CREATE TABLE `dept_unit` (
   `id` int(11) NOT NULL,
-  `course_name` varchar(100) NOT NULL
+  `dept_unit_name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `course`
+-- Dumping data for table `dept_unit`
 --
 
-INSERT INTO `course` (`id`, `course_name`) VALUES
+INSERT INTO `dept_unit` (`id`, `dept_unit_name`) VALUES
 (1, 'Computer Science'),
 (2, 'Statistics'),
 (3, 'Biological Science'),
@@ -90,12 +90,12 @@ INSERT INTO `faculty` (`id`, `faculty_name`) VALUES
 CREATE TABLE `members` (
   `id` int(11) NOT NULL,
   `fullname` varchar(50) NOT NULL,
-  `gender` varchar(10) NOT NULL,
-  `faculty` varchar(10) NOT NULL,
-  `course` varchar(10) NOT NULL,
-  `matric_number` varchar(20) NOT NULL,
-  `graduation_year` varchar(10) NOT NULL,
-  `phone` varchar(15) NOT NULL,
+  `gender` varchar(100) NOT NULL,
+  `staff_type` varchar(100) NOT NULL,
+  `faculty` varchar(100) NOT NULL,
+  `dept_unit` varchar(20) NOT NULL,
+  `staff_id` varchar(50) NOT NULL,
+  `phone` varchar(11) NOT NULL,
   `email` varchar(30) NOT NULL,
   `address` varchar(50) NOT NULL,
   `photo` varchar(200) NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE `members` (
 -- Dumping data for table `members`
 --
 
-INSERT INTO `members` (`id`, `fullname`, `gender`, `faculty`, `course`, `matric_number`, `graduation_year`, `phone`, `email`, `address`, `photo`, `password`) VALUES
+INSERT INTO `members` (`id`, `fullname`, `gender`, `staff_type`, `faculty`, `dept_unit`, `staff_id`, `phone`, `email`, `address`, `photo`, `password`) VALUES
 (1, 'Bashir Hassan', 'Male', 'Science', 'Computer S', 'UG/12/CSC/1066', '2020', '08061689497', 'bashhassan2020@gmail.com', 'Federal Lowcost Gombe', 'no_profile.png', '$2y$10$Qq2hrWqpW7enZcXkHc3Oe.H1Y3YiHQMDYABT0cMjvbR');
 
 -- --------------------------------------------------------
@@ -147,9 +147,9 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `course`
+-- Indexes for table `dept_unit`
 --
-ALTER TABLE `course`
+ALTER TABLE `dept_unit`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -182,9 +182,9 @@ ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `course`
+-- AUTO_INCREMENT for table `dept_unit`
 --
-ALTER TABLE `course`
+ALTER TABLE `dept_unit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --

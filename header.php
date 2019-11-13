@@ -160,7 +160,7 @@ if (isset($_POST['post'])) {
     <div class="sidebar-fixed position-fixed">
     <div align="center">
       <a class="">
-        <img src="img/mssnlogo.png" style=" width:150px; height:150px; " class="img-responsive mb-2" alt="">
+        <img src="img/mssnlogo.jpg" style=" width:150px; height:150px; " class="img-responsive mb-2" alt="">
       </a>
   </div>
       <div class="list-group list-group-flush">

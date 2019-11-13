@@ -67,7 +67,7 @@
         <img class="mb-3 mt--5" src="member/img/logo.jpg" alt="">
       </div>
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading mb-0">Welcome To <br> Gombe State University <br> (GSU) <br> Alumni Association</h1>
+      <h1 class="masthead-heading mb-0">Welcome To <br> Gombe State University <br> (GSU) <br>Muslim-Ummah</h1>
 
       <!-- Icon Divider -->
       <div class="divider-custom">

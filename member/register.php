@@ -57,10 +57,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     
                     $fullname = trim($_POST['fullname']);
                     $gender = trim($_POST['gender']);
+                    $staff_type = trim($_POST['staff_type']);
                     $faculty = trim($_POST['faculty']);
-                    $course = trim($_POST['course']);
-                    $matric_number = trim($_POST['matric_number']);
-                    $graduation_year = trim($_POST['graduation_year']);
+                    $dept = trim($_POST['dept_unit']);
+                    $staff_id = trim($_POST['staff_id']);
                     $phone = trim($_POST['phone']);
                     $email = trim($_POST['email']);
                     $address = trim($_POST['address']);
@@ -99,19 +99,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($email_err) && empty($password_err) && empty($confirm_password_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO members (fullname, gender, faculty, course, matric_number, graduation_year, phone, email, address, photo, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO members (fullname, gender, staff_type, faculty, dept_unit, staff_id, phone, email, address, photo, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
          
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
-            $stmt->bind_param("sssssssssss", $param_fullname, $param_gender, $param_faculty, $param_course, $param_matric_number, $param_graduation_year, $param_phone, $param_email, $param_address, $param_photo, $param_password);
+            $stmt->bind_param("sssssssssss", $param_fullname, $param_gender, $param_staff_type, $param_course, $param_matric_number, $param_graduation_year, $param_phone, $param_email, $param_address, $param_photo, $param_password);
             
             // Set parameters
             $param_fullname = $fullname;
             $param_gender = $gender;
+            $param_staff_type = $staff_type;
             $param_faculty = $faculty;
-            $param_course = $course;
-            $param_matric_number = $matric_number;
-            $param_graduation_year = $graduation_year;
+            $param_dept = $dept;
+            $param_staff_id = $staff_id;
             $param_phone = $phone;
             $param_email = $email;
             $param_address = $address;
@@ -191,7 +191,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body id="page-top">
 
   <div class="container">
-    <div class="col-md-6 mx-auto">
+    <div class="col-md-8 mx-auto">
         <div class="card">
             <div class="card-body">
 
@@ -226,69 +226,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>                   
                     <div class="col-md-6">
                         <div class="form-group">
+                            <select name="staff_type" class="form-control" required>
+                            <option value="<?php echo $staff_type?>">-- Select Staff Type --</option>
+                            <option value="Academic">Academic</option>
+                            <option value="Non-Academic">Non-Academic</option>
+
+                            </select>                                                                                                    
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <select name="faculty" class="form-control" required>
                             <option value="<?php echo $faculty?>">-- Select Faculty --</option>
-                            <?php 
+
+                                <?php 
                                     include('config.php');
                                     $sql = "SELECT * FROM faculty";
                                     $stmt = mysqli_query($mysqli,$sql);
                                     while($row = mysqli_fetch_assoc($stmt)){
                                     $faculty = $row['faculty_name'];
                                 ?>                
-                                <option value="<?php echo $faculty;?>"><?php echo $faculty;?></option><?php }?>
-                            </select>                                                                                                    
-                        </div>
-                    </div> 
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <select name="course" class="form-control" required>
-                            <option value="<?php echo $course?>">-- Select course --</option>
-
-                                <?php 
-                                    include('config.php');
-                                    $sql = "SELECT * FROM course";
-                                    $stmt = mysqli_query($mysqli,$sql);
-                                    while($row = mysqli_fetch_assoc($stmt)){
-                                    $course = $row['course_name'];
-                                ?>                
-                                <option value="<?php echo $course;?>"><?php echo $course;?></option><?php }?>  
+                                <option value="<?php echo $faculty;?>"><?php echo $faculty;?></option><?php }?>  
                             </select>                                                                                                     
                         </div>
                     </div> 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" name="matric_number" class="form-control" placeholder="Matric Number" value="<?php echo $matric_number?>" required>                                                                                                    
+                            <select name="dept_unit" class="form-control">
+                                <option value="">-- Dept/Unit --</option>
+                                <?php 
+                                    include('config.php');
+                                    $sql = "SELECT * FROM dept_unit";
+                                    $stmt = mysqli_query($mysqli,$sql);
+                                    while($row = mysqli_fetch_assoc($stmt)){
+                                    $dept = $row['dept_unit_name'];
+                                ?>                
+                                <option value="<?php echo $dept;?>"><?php echo $dept;?></option><?php }?>
+                            </select>                                                                                                    
                         </div>
                     </div> 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <select name="graduation_year" class="form-control">
-                                <option value="">-- Graduation Year --</option>
-                                <option value="2009">2009</option>
-                                <option value="2010">2010</option>
-                                <option value="2011">2011</option>
-                                <option value="2012">2012</option>
-                                <option value="2013">2013</option>
-                                <option value="2014">2014</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2017">2017</option>
-                                <option value="2018">2018</option>
-                                <option value="2019">2019</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                                <option value="2026">2026</option>
-                                <option value="2027">2027</option>
-                                <option value="2028">2028</option>
-                                <option value="2029">2029</option>
-                                <option value="2030">2030</option>
-                            </select>                                                                                                    
+                            <input type="text" name="staff_id" class="form-control" placeholder="Staff ID" value="<?php echo $matric_number?>" required>                                                                                                    
                         </div>
                     </div> 
+                    
                     <div class="col-md-6">
                         <div class="form-group">
                             <input type="text" name="phone" class="form-control" placeholder="Phone Number" value="<?php echo $phone?>" required>                                                                                                    
@@ -336,7 +318,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <!-- membership register link -->
                 <p class="mt-2 mb-1 text-default">Already a member? <a href="login.php">Login</a></p>
                 <!-- copyright -->
-                <p class="mt-2 mb-1 text-muted">&copy; G S U Alumni 2019</p>
+                <p class="mt-2 mb-1 text-muted">&copy; Muslim-Ummah G S U 2019</p>
 
             </div>
         </div>

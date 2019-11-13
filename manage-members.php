@@ -103,13 +103,13 @@ include('header.php');
 
     <thead>
       <tr>
-        <th>S/N</th>
+      <th>S/N</th>
         <th>Photo</th>
         <th>Full Name</th>
+        <th>Staff Type</th>
         <th>Faculty</th>
-        <th>Course</th>
-        <th>Matric No.</th>                                                    
-        <th>Grad. Year</th>                                                    
+        <th>Dept/Unit</th>
+        <th>Staff Id</th>                                                    
         <th>Phone No.</th>
         <th>Email</th>
         <th class="px-5">Address</th>
@@ -122,10 +122,10 @@ include('header.php');
         <th>S/N</th>
         <th>Photo</th>
         <th>Full Name</th>
+        <th>Staff Type</th>
         <th>Faculty</th>
-        <th>Course</th>
-        <th>Matric No.</th>
-        <th>Grad. Year</th>                                                    
+        <th>Dept/Unit</th>
+        <th>Staff Id</th>                                                    
         <th>Phone No.</th>
         <th>Email</th>
         <th>Address</th>
@@ -139,10 +139,10 @@ include('header.php');
                             <td><?php echo $i?></td>
                             <td><img src="member/uploads/<?php echo $row['photo'];?>" class="rounded" width="100px" height="100px" alt=""></td>
                             <td><?php echo $row['fullname'];?></td>
+                            <td><?php echo $row['staff_type'];?></td>
                             <td><?php echo $row['faculty'];?></td>
-                            <td><?php echo $row['course'];?></td>
-                            <td><?php echo $row['matric_number'];?></td>
-                            <td><?php echo $row['graduation_year'];?></td>
+                            <td><?php echo $row['dept_unit'];?></td>
+                            <td><?php echo $row['staff_id'];?></td>
                             <td><?php echo $row['phone'];?></td>
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['address'];?></td>

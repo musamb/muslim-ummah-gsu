@@ -9,10 +9,10 @@ if (isset($_POST['add-faculty'])) {
     $result = mysqli_query($mysqli,$sql);
 }
 
-if (isset($_POST['add-course'])) {
-    $course = $_POST['course'];
+if (isset($_POST['add-dept_unit'])) {
+    $dept = $_POST['dept_unit'];
 
-    $sql = "INSERT INTO course (course_name) VALUES('$course')";
+    $sql = "INSERT INTO dept_unit (dept_unit_name) VALUES('$dept')";
     $result = mysqli_query($mysqli,$sql);
 }
 
@@ -44,9 +44,9 @@ if (isset($_POST['add-course'])) {
         <div class="card-body d-sm-flex justify-content-between">
 
           <h4 class="mb-2 mb-sm-0 pt-1">
-            <a href="dashboard" target="_blank">Home Page</a>
+            <a href="dashboard.php" >Home Page</a>
             <span>/</span>
-            <span>Add Faculty/Course</span>
+            <span>Add Dept/Unit</span>
           </h4>
 
         </div>
@@ -80,7 +80,7 @@ if (isset($_POST['add-course'])) {
         </button>
       </div>
       <div class="modal-body">
-            <form action="faculty-course.php" method="POST">
+            <form action="dept_unit.php" method="POST">
                 <input type="text" name="faculty" class="form-control" placeholder="Faculty Name">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" name="add-faculty" class="btn btn-primary">Add</button>
@@ -92,7 +92,7 @@ if (isset($_POST['add-course'])) {
 </div>
 <!--Modal: Login / Register Form Demo-->
 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#course">Add Course
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#course">Add Dept/Unit
                     </button>
                     <!--Modal: Login / Register Form Demo-->
 <div class="modal fade" id="course" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -100,16 +100,16 @@ if (isset($_POST['add-course'])) {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Dept/Unit</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-            <form action="faculty-course.php" method="POST">
-                <input type="text" name="course" class="form-control" placeholder="Course Name">
+            <form action="dept_unit.php" method="POST">
+                <input type="text" name="dept_unit" class="form-control" placeholder="Dept/Unit Name">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" name="add-course" class="btn btn-primary">Add</button>
+        <button type="submit" name="add-dept_unit" class="btn btn-primary">Add</button>
             </form>
       </div>
       

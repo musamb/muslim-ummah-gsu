@@ -119,9 +119,9 @@ if (isset($_POST['post'])) {
               </a>
             </li> -->
             <li class="nav-item">
-              <a href="faculty-course.php" class="nav-link waves-effect"
+              <a href="dept_unit.php" class="nav-link waves-effect"
                 >
-                <i class="fas fa fa-plus mr-2"></i>Add Faculty/Course
+                <i class="fas fa fa-plus mr-2"></i>Add Dept/Unit
               </a>
             </li>
             <li class="nav-item">
@@ -169,8 +169,8 @@ if (isset($_POST['post'])) {
         </a>
         <!-- <a href="profile.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa-user mr-3"></i>Profile</a> -->
-          <a href="faculty-course.php" class="list-group-item list-group-item-action waves-effect">
-          <i class="fas fa-plus mr-3"></i>Add Faculty/Course</a>
+          <a href="dept_unit.php" class="list-group-item list-group-item-action waves-effect">
+          <i class="fas fa-plus mr-3"></i>Add Dept/Unit</a>
         <a href="manage-members.php" class="list-group-item list-group-item-action waves-effect">
           <i class="fas fa fa-users mr-3"></i>Manage Members</a>
         <a href="manage-notification.php" class="list-group-item list-group-item-action waves-effect">

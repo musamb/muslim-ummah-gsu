@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2019 at 09:13 AM
+-- Generation Time: Nov 13, 2019 at 03:14 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -57,10 +57,8 @@ CREATE TABLE `dept_unit` (
 --
 
 INSERT INTO `dept_unit` (`id`, `dept_unit_name`) VALUES
-(1, 'Computer Science'),
-(2, 'Statistics'),
-(3, 'Biological Science'),
-(4, 'Business Administration');
+(1, 'Mathematics'),
+(2, 'Bursary');
 
 -- --------------------------------------------------------
 
@@ -79,7 +77,8 @@ CREATE TABLE `faculty` (
 
 INSERT INTO `faculty` (`id`, `faculty_name`) VALUES
 (1, 'Science'),
-(2, 'Art and Social Sciences');
+(2, 'Art and Social Sciences'),
+(3, 'Not Applicable');
 
 -- --------------------------------------------------------
 
@@ -107,7 +106,7 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `fullname`, `gender`, `staff_type`, `faculty`, `dept_unit`, `staff_id`, `phone`, `email`, `address`, `photo`, `password`) VALUES
-(1, 'Bashir Hassan', 'Male', 'Science', 'Computer S', 'UG/12/CSC/1066', '2020', '08061689497', 'bashhassan2020@gmail.com', 'Federal Lowcost Gombe', 'no_profile.png', '$2y$10$Qq2hrWqpW7enZcXkHc3Oe.H1Y3YiHQMDYABT0cMjvbR');
+(1, 'Musa Mustapha Baba', 'Male', 'Non-Academic', 'Not Applicable', 'Bursary', 'GSU1010', '08132725694', 'musambaba56@gmail.com', 'Federal lowcost Gombe', 'IMG_0981.JPG', '$2y$10$c.4duybm2/LhbqZ/PUBKjeTdijcYDh9HuwiZ27HpB4C');
 
 -- --------------------------------------------------------
 
@@ -134,7 +133,9 @@ INSERT INTO `post` (`id`, `status`, `subject`, `message`, `date`) VALUES
 (4, 'Admin', 'General Members Meeting', 'The faculty of science is one of the three faculties that was established since the inception of the university 10 years ago and consists of the departments of biological sciences, biochemistry, chemistry, geography, geology, mathematics, microbiology and physics. actually the departments of biochemistry and microbiology were curved out of the department of biological sciences two sessions ago. at the moment the departments of geology, maths and the office of the dean occupy some of the quadrangular block of offices that is shared between the faculty and that of arts and social sciences. the other departments are located within the vicinity of the faculty except the departments of biochemistry and microbiology that are situated at the premises of the medical college about Â½ kilometre away from the faculty.', '2019-11-08 14:29:29'),
 (5, 'Admin', 'General Members Meeting', 'The faculty of science is one of the three faculties that was established since the inception of the university 10 years ago and consists of the departments of biological sciences, biochemistry, chemistry, geography, geology, mathematics, microbiology and physics. actually the departments of biochemistry and microbiology were curved out of the department of biological sciences two sessions ago. at the moment the departments of geology, maths and the office of the dean occupy some of the quadrangular block of offices that is shared between the faculty and that of arts and social sciences.', '2019-11-08 14:33:16'),
 (6, 'Admin', 'Aminu', 'Yalenguruza', '2019-11-12 12:52:45'),
-(7, 'Member', 'Congress Meeting notice', '10:00pm', '2019-11-12 12:55:36');
+(7, 'Member', 'Congress Meeting notice', '10:00pm', '2019-11-12 12:55:36'),
+(8, 'Member', 'Walimah! Walimah!! Walimah!!!', 'This is to invite all Mssn Alumni to The Sendfourth Walimah of the Outgoing Student of the Department of Business Administration', '2019-11-13 10:16:08'),
+(9, 'Admin', 'Walimah! Walimah!! Walimah!!!', '2020', '2019-11-13 13:30:31');
 
 --
 -- Indexes for dumped tables
@@ -185,13 +186,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `dept_unit`
 --
 ALTER TABLE `dept_unit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `members`
@@ -203,7 +204,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

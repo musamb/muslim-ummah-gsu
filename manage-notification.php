@@ -2,6 +2,12 @@
 
 include('header.php');
 
+if (isset($_GET['delete'])) {
+  $id = $_GET['delete'];
+  $sql = "DELETE FROM post WHERE id = $id";
+  $res = mysqli_query($mysqli,$sql);
+  // header("location:manage-notification.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +36,7 @@ include('header.php');
         <div class="card-body d-sm-flex justify-content-between">
 
           <h4 class="mb-2 mb-sm-0 pt-1">
-            <a href="dashboard">Home Page</a>
+            <a href="dashboard.php">Home Page</a>
             <span>/</span>
             <span>Manage Notifications</span>
           </h4>
@@ -66,10 +72,14 @@ include('header.php');
               <div class="col-md-10 mx-auto mb-2">
                   <div  class="card" id="add-row">
                       <div class="card-body">
+
               <h4><?php echo $row['status']?></h4>
               <h5>Subject: <?php echo $row['subject'];?></h5>
               <p><?php echo $row['message'];?></p>
               <p><b><?php echo $row['date'];?></b></p>
+              <p class="ml-auto">
+              <a href="manage-notification.php?delete=<?php echo $row['id'];?>" class="badge badge-danger">Delete</a>
+              </p>
               </div>
               </div>
         </div>

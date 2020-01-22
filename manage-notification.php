@@ -97,17 +97,10 @@ if (isset($_GET['delete'])) {
 
           </div>
           <!-- Card-->
-
         </div>
         <!--Grid column-->
-
-        
-
       </div>
       <!--Grid row-->
-
-      
-
     </div>
   </main>
   <!--Main layout -->
